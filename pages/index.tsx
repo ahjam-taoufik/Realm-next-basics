@@ -2,6 +2,8 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import * as Realm from "realm-web"
 import Header from './../components/Header';
+import Container from './../components/Container';
+import Hero from './../components/Hero';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -29,6 +31,9 @@ export default function Home() {
       </Head>
         <div className="bg-white w-full min-h-screen">
            <Header/>
+           <Container>
+             <Hero/>
+           </Container>
         </div>
     </div>
   )
