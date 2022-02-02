@@ -7,6 +7,7 @@ import Hero from './../components/Hero';
 import Category from './../components/Category';
 import Products from './../components/Products';
 import Pagination from './../components/Pagination';
+import Footer from './../components/Footer';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -42,6 +43,7 @@ export default function Home() {
            <Products products={products} />
            <Pagination/>
            </Container>
+           <Footer/>
         </div>
     </div>
   )
