@@ -4,6 +4,7 @@ import * as Realm from "realm-web"
 import Header from './../components/Header';
 import Container from './../components/Container';
 import Hero from './../components/Hero';
+import Category from './../components/Category';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -33,6 +34,10 @@ export default function Home() {
            <Header/>
            <Container>
              <Hero/>
+             <Category
+            category="Tech Wear"
+            categoryCount={`${products.length} Products`}
+          />
            </Container>
         </div>
     </div>
