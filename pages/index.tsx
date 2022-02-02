@@ -5,6 +5,7 @@ import Header from './../components/Header';
 import Container from './../components/Container';
 import Hero from './../components/Hero';
 import Category from './../components/Category';
+import Products from './../components/Products';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -38,6 +39,7 @@ export default function Home() {
             category="Tech Wear"
             categoryCount={`${products.length} Products`}
           />
+           <Products products={products} />
            </Container>
         </div>
     </div>
