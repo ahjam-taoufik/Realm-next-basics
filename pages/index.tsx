@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import * as Realm from "realm-web"
+import Header from './../components/Header';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -20,19 +21,21 @@ export default function Home() {
    }, []);
    
 
-
-
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-          {products && products.map((product)=>{return <p key={product._id}>{product.name}</p>  })}
-      </main>
-
+        <div className="bg-white w-full min-h-screen">
+           <Header/>
+        </div>
     </div>
   )
 }
+
+
+
+{/* <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
+{products && products.map((product)=>{return <p key={product._id}>{product.name}</p>  })}
+</main> */}
