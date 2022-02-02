@@ -6,6 +6,7 @@ import Container from './../components/Container';
 import Hero from './../components/Hero';
 import Category from './../components/Category';
 import Products from './../components/Products';
+import Pagination from './../components/Pagination';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -24,7 +25,6 @@ export default function Home() {
    
    }, []);
    
-
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <Head>
@@ -40,6 +40,7 @@ export default function Home() {
             categoryCount={`${products.length} Products`}
           />
            <Products products={products} />
+           <Pagination/>
            </Container>
         </div>
     </div>
