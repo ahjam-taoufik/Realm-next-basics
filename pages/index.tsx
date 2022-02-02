@@ -19,7 +19,7 @@ export default function Home() {
       try {
         const user =await app.logIn(credentials);
         const allProducts=await user.functions.getAllProducts()
-        setProducts(allProducts)
+        setProducts(()=>allProducts)
       } catch(err) {
         console.error("Failed to log in", err);
       }
